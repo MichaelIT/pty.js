@@ -1,6 +1,13 @@
 {
   'targets': [{
     'target_name': 'pty',
+    'xcode_settings': {
+      'MACOSX_DEPLOYMENT_TARGET': '10.11',
+      'OTHER_CFLAGS': [
+        "-std=c++11",
+        "-stdlib=libc++"
+      ],
+    },
     'include_dirs' : [
       '<!(node -e "require(\'nan\')")'
     ],
